@@ -1,20 +1,14 @@
-/* Typography
---------------------------------------------- */
-@import "typography/typography";
+html, body {
+    background-color: $bg;
+    color: $text1;
+}
 
-/* Elements
---------------------------------------------- */
-@import "elements/body";
-@import "elements/hr";
-@import "elements/lists";
-@import "elements/media";
-@import "elements/tables";
+a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 500ms ease-in-out;
 
-/* Links
---------------------------------------------- */
-@import "elements/links";
-
-/* Forms
---------------------------------------------- */
-@import "elements/buttons";
-@import "elements/fields";
+    &:hover {
+        color: $pink_pastel;
+    }
+}

@@ -41,7 +41,6 @@
 			$hsc2020_description = get_bloginfo( 'description', 'display' );
 			if ( $hsc2020_description || is_customize_preview() ) :
 				?>
-				<p class="site-description"><?php echo $hsc2020_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
 			<?php endif; ?>
 		</div><!-- .site-branding -->
 
