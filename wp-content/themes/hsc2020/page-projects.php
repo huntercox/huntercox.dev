@@ -22,10 +22,53 @@ get_header();
 			the_post();
 
 			get_template_part( 'template-parts/content', 'projects' );
-
-			
-
 		endwhile; // End of the loop.
+		?>
+
+		<?php
+		$args = array('post_type' => 'employer');
+		$employers = get_posts( $args );
+		
+		foreach($employers as $job):
+		
+			$employer_name = $job->post_title;
+			$employer_ID   = $job->ID;
+
+			// list Projects within each employer
+			$projects = get_field('project_list', $employer_ID);
+			if( $projects ) :
+				echo '<ul class="projects">';
+				$i = 0;
+				foreach( $projects as $project ) {
+					$i++;
+					if ( $project ) { echo '<li class="project">'; }
+					
+						$name = $project['project_name'];
+						$type = $project['project_type']['value'];
+						$desc = $project['project_description'];
+				?>	
+						<div class="project__label toggler">
+							<p class="project__name"><?php echo $name; ?></p>
+						</div>
+						<div class="project__details toggle-target">
+							<p class="project__type"><span>Type:</span><?php echo $type; ?></p>
+							<div class="project__description"><?php echo $desc; ?></div>
+							<?php 
+								if ( $project ) { 
+									echo '<p class="project__employer">'.$employer_name.'</p>';
+								}
+							?>
+						</div><!-- /.toggle-target -->
+						
+				<?php
+					if ( $project ) {
+						echo '</li>'; 
+					}
+				}
+				echo '</ul>';
+			endif;
+
+		endforeach;
 		?>
 
 	</main><!-- #main -->

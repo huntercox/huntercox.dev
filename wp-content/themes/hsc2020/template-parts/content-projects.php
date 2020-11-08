@@ -29,6 +29,12 @@
 		?>
 	</div><!-- .entry-content -->
 
+	<div class="projects">
+		<?php 
+		// Get "Employers" post_ids
+		?>
+	</div>
+
 	<?php if ( get_edit_post_link() ) : ?>
 	
 		<footer class="entry-footer">

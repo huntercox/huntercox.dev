@@ -31,6 +31,29 @@ get_header();
 		endwhile; // End of the loop.
 		?>
 
+<?php
+		$args = array('post_type' => 'employer');
+		$employers = get_posts( $args );
+		foreach($employers as $job):
+		?>
+			<h3 class="employer_title">><?php echo $job->post_title; ?></h3>
+			<div class='post-content'><?php echo $job->post_content; ?></div>
+			<!-- Projects -->
+			<?php if ( have_rows('project_list') ) : ?>
+			
+				<?php while( have_rows('project_list') ) : the_row(); ?>
+			
+					<?php the_sub_field('project_name'); ?>
+			
+				<?php endwhile; ?>
+			
+			<?php endif; ?>
+			
+		<?php
+		endforeach;
+		?>
+
+
 	</main><!-- #main -->
 
 <?php
