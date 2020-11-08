@@ -48,22 +48,25 @@ add_action( 'wp_enqueue_scripts', 'hsc2020_scripts' );
 
 
 /** ============================================================================ 
- *  
  * Add Favicon to WordPress admin
  */ 
 	function favicon_admin() {
 		echo '<link rel="Shortcut Icon" type="image/x-icon" href="' . get_bloginfo('wpurl') . '/wp-content/favicon.ico" />';
 	}
 	add_action( 'admin_head', 'favicon_admin' ); //admin end
-
-/** 
- * 
- */
 	function favicon_frontend() {
 		echo '<link rel="Shortcut Icon" type="image/x-icon" href="' . get_bloginfo('wpurl') . '/wp-content/themes/hsc2020/favicon.ico" />';
 	}
 	add_action( 'wp_head', 'favicon_frontend' ); //front end
 
+/** ============================================================================ 
+ * Custom image sizes
+ */ 
+add_action( 'after_setup_theme', 'wpdocs_theme_setup' );
+function wpdocs_theme_setup() {
+		// Homepage "Hero Banner" image
+    add_image_size( 'homepage-banner', 1200, 400, true ); // (cropped)
+}
 
 
 /**
