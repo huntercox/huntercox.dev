@@ -34,10 +34,17 @@ add_action( 'after_setup_theme', 'hsc2020_content_width', 0 );
 /**
  * Enqueue scripts and styles.
  */
+
 function hsc2020_scripts() {
 	// wp_enqueue_style( 'hsc2020-style', get_stylesheet_uri(), array(), _S_VERSION );
 	// wp_style_add_data( 'hsc2020-style', 'rtl', 'replace' );
-	wp_enqueue_style( 'hsc2020-style', get_template_directory_uri() . '/css/main.css', array(), _S_VERSION );
+	wp_enqueue_style(
+		'hsc2020-style',
+		get_stylesheet_directory_uri() . '/css/main.css',
+		array(),
+		filemtime( get_stylesheet_directory() . '/css/main.css' )
+	 );
+	// wp_enqueue_style( 'hsc2020-style', get_template_directory_uri() . '/css/main.css', array(), _S_VERSION );
 
 	wp_enqueue_script( 'hsc2020-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'hsc2020-myscripts', get_template_directory_uri() . '/js/my-scripts.js', array(), _S_VERSION, true );

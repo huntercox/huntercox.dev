@@ -6,12 +6,12 @@ const browserSync = require('browser-sync').create();
 
 // "BrowserSync"
 //  ~ conenct to local proxy server and serve files via browser-sync
-gulp.task('browser-sync', function() {
-  browserSync.init({
-      proxy: "https://huntercox.local"
-  });
-  gulp.watch("./wp-content/themes/hsc2020/sass/**/*.scss").on("change", browserSync.reload);
-});
+// gulp.task('browser-sync', function() {
+//   browserSync.init({
+//       proxy: "https://huntercox.local"
+//   });
+//   gulp.watch("./wp-content/themes/hsc2020/sass/**/*.scss").on("change", browserSync.reload);
+// });
 
 
 // "Styles"

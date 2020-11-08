@@ -2,4 +2,39 @@
   .site-header {
     margin-bottom: 0;
   }
+
+  // Hero
+    .home__hero {
+      position: relative;
+      left:0;
+      width: 100%;
+    }
+
+    .hero {
+      &__bg-img {
+        background-position: center;
+        background-size: cover;
+        height: 300px;
+        max-height: 300px;
+      }//.hero__bg-img
+
+      &__overlay {
+        position: absolute;
+        bottom: 8%;
+        right: 10%;
+        left: auto;
+        width: 40%;
+        padding: 10px 20px; 
+        background-color: $purple_dk;
+        background-blend-mode: multiply;
+      }
+        &__headline {
+
+        }//.hero__headline
+
+        &__tagline {
+
+        }//.hero__tagline
+
+    }//.hero__&
 }//.home

@@ -1,6 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,700;0,900;1,400&display=swap");
 /* =Reset
 -------------------------------------------------------------- */
-@import url("https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,700;0,900;1,400&display=swap");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -341,10 +341,15 @@ p {
   text-align: end;
   flex: 1 0 50%; }
 
+*, html, body {
+  font-family: "Alegreya", Helvetica, sans-serif; }
+
 h1, h2, h3, h4, h5, h6 {
+  font-family: "Alegreya", Helvetica, sans-serif;
   font-weight: bold; }
 
 h1 {
+  font-family: "Alegreya", Helvetica, sans-serif;
   font-weight: 900; }
 
 h3.employer_title {
@@ -399,6 +404,30 @@ a {
     color: #321469;
     font-weight: 900;
     padding-left: 10%; }
+
+.home .site-header {
+  margin-bottom: 0; }
+
+.home .home__hero {
+  position: relative;
+  left: 0;
+  width: 100%; }
+
+.home .hero__bg-img {
+  background-position: center;
+  background-size: cover;
+  height: 300px;
+  max-height: 300px; }
+
+.home .hero__overlay {
+  position: absolute;
+  bottom: 8%;
+  right: 10%;
+  left: auto;
+  width: 40%;
+  padding: 10px 20px;
+  background-color: #321469;
+  background-blend-mode: multiply; }
 
 .page-id-19 .project__name {
   color: #321469;

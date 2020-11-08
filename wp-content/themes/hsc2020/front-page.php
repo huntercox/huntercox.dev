@@ -14,20 +14,12 @@
 
 get_header();
 ?>
-
-	<main id="primary" class="site-main">
-
-		<?php while ( have_posts() ) : the_post(); ?>
-
-		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-
-		
-		<?php
+<?php
 			$hero = get_field('home_hero_section');
 			if( $hero ): ?>
-					<div id="hero">
-							<img src="<?php echo esc_url( $hero['background_image']['url'] ); ?>" alt="<?php echo esc_attr( $hero['background_image']['alt'] ); ?>" />
-							<div class="content">
+					<div class="home__hero">
+						<div class="hero__bg-img" style="background-image: url(<?php echo esc_url( $hero['background_image']['url'] ); ?>)"></div><!-- /.hero__bg-img -->
+							<div class="hero__overlay">
 									<?php
 										$headline = $hero['overlay_headline']; 
 										$tagline  = $hero['overlay_tagline'];
@@ -39,14 +31,17 @@ get_header();
 											echo '<p class="hero__tagline">'.$tagline.'</p>';
 										}
 									?>
-							</div>
+							</div><!-- /.hero__overlay -->
 					</div>
-					<style type="text/css">
-							#hero {
-									background-color: <?php echo esc_attr( $hero['color'] ); ?>;
-							}
-					</style>
 		<?php endif; ?>
+	<main id="primary" class="site-main">
+
+		<?php while ( have_posts() ) : the_post(); ?>
+
+		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
+		<!-- Introduction -->
+		
 
 		</article><!-- #post-<?php the_ID(); ?> -->
 		<?php endwhile; // End of the loop. ?>
