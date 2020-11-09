@@ -34,19 +34,56 @@ get_header();
 							</div><!-- /.hero__overlay -->
 					</div>
 		<?php endif; ?>
-	<main id="primary" class="site-main">
 
-		<?php while ( have_posts() ) : the_post(); ?>
+		<main id="primary" class="site-main">
 
-		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+			<?php while ( have_posts() ) : the_post(); ?>
+			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-		<!-- Introduction -->
-		
+			<!-- Introduction -->
+				<?php if ( get_field('home_intro_section') ) : ?>
+					<p><?php echo get_field('home_intro_section'); ?></p>
+				<?php endif; ?>
 
-		</article><!-- #post-<?php the_ID(); ?> -->
-		<?php endwhile; // End of the loop. ?>
+			<!-- Links -->
+					<div class="home__links-section">
+					<?php
+						// Links group
+						$links = get_field('home_links_section'); 
+						if ( $links ) : 
+							echo '<div class="links">';
 
-	</main><!-- #main -->
+							$resume_link = $links['resume_link'];
+							$projects_link = $links['projects_link'];
+
+							if( $resume_link ) { 
+								$resume_title = $resume_link->post_title;
+								$resume_ID 		= $resume_link->ID;
+								$resume_url   = get_permalink($resume_ID);
+							?>
+								<div class="links__resume">
+									<a href="<?php echo $resume_url; ?>"><?php echo $resume_title; ?></button>
+								</div>
+							<?php 
+							} 
+							if( $projects_link ) {
+								$projects_title = $projects_link->post_title;
+								$projects_ID 		= $projects_link->ID;
+								$projects_url   = get_permalink($projects_ID);
+							?>
+								<div class="links__projects">
+									<a href="<?php echo $projects_url; ?>"><?php echo $projects_title; ?></button>
+								</div>
+							<?php 
+							}
+						endif;
+					?>
+					</div><!-- /.home__links-section -->
+				
+			</article><!-- #post-<?php the_ID(); ?> -->
+			<?php endwhile; // End of the loop. ?>
+
+		</main><!-- #main -->
 
 <?php
 get_footer();
