@@ -5,6 +5,10 @@
     @import "external/simple-grid";
     @import "external/accessibility";
     @import "external/navigation";
+    
+    $fa-font-path:"../node_modules/@fortawesome/fontawesome-free/webfonts";
+    @import "../node_modules/@fortawesome/fontawesome-free/scss/fontawesome";
+    @import "../node_modules/@fortawesome/fontawesome-free/scss/brands";
 
 
 // Base
