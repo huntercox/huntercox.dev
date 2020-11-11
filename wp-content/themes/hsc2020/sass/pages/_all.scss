@@ -61,3 +61,33 @@
     }
 
 }//.site-main
+
+
+// Footer
+.site-footer {
+    margin: 15px;
+    display: flex;
+    justify-content: space-between;
+
+    .site-info {
+
+
+        a {
+            color: $pink_pastel;
+            font-size: 18px;
+        }    
+    }
+
+    .footer__social-links {
+        display: flex;
+        justify-content: flex-end;
+
+        li {
+            margin: 5px 10px;
+
+            i.fab {
+                font-size: 24px;
+            }
+        }        
+    }
+}//..site-footer
