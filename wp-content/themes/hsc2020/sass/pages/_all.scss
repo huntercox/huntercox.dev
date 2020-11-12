@@ -66,17 +66,23 @@
 // Footer
 .site-footer {
     margin: 15px;
+    margin-bottom: 10px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 
     .site-info {
-
 
         a {
             color: $pink_pastel;
             font-size: 18px;
-        }    
-    }
+            transition: color 200ms ease-in-out;
+
+            &:hover {
+                color: $green_bright;
+            }
+        }//a
+    }//.site-info
 
     .footer__social-links {
         display: flex;
@@ -85,9 +91,20 @@
         li {
             margin: 5px 10px;
 
-            i.fab {
-                font-size: 24px;
+            a {
+                color: $green_pastel;
+                transition: color 200ms ease-in-out;
+    
+                &:hover {
+                    color: $pink_bright;     
+                }
+                
+                i.fab {
+                    font-size: 24px;
+                    color: inherit;
+                }
             }
+            
         }        
     }
 }//..site-footer
