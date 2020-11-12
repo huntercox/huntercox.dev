@@ -25,5 +25,8 @@ node_modules/
 # Codekit
 config.codekit3
 
+# VS Code
+*.code-workspace
+
 # Original _underscores Sass structure
 og_sass/
