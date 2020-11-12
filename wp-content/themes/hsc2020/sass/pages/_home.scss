@@ -66,18 +66,22 @@
         margin-bottom: 80px;
 
         > a {
-          max-width: 25%;
-          padding: 15px 30px;
-          background-color: $pink_pastel;
+          width: 200px;
+          padding: 15px 0px;
           text-align: center;
-          color: $purple_dk;
           font-size: 32px;
-          font-weight: 900;
           letter-spacing: 1px;
-          transition: all 200ms ease-in;
+            
+          background-color: $pink_pastel;
+          color: $purple_dk;
+          font-weight: 400;
+          transition: all 200ms ease-in-out;
+          transition: font-weight 100ms linear;
 
           &:hover {
-            background-color: $pink_bright;
+            background-color: $green_bright;
+            color: $purple_dk;
+            font-weight: 900;
           }
         }//a 
       }//.links
@@ -110,13 +114,27 @@
         &__link {
           display: inline-block;
           margin-top: 10px;
-
+        
           > a {
-            background-color: $purple_dk;
-            color: $pink_pastel; 
+            display: block;
+            width: 140px;
+            padding: 8px 0px 7px 0px;
+            text-align: center;
+            font-style: normal;
             font-size: 24px;
-            padding: 8px 20px 7px 20px;
-          }
+
+            background-color: $purple_dk;
+            color: $pink_pastel;
+            font-weight: 400;
+            transition: all 200ms ease-in-out;
+            transition: font-weight 100ms linear;
+
+            &:hover {
+              background-color: $pink_pastel;
+              color: $purple_dk;
+              font-weight: 900;
+            }
+          }//a
         }
       }//.callout
     }

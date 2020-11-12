@@ -5051,17 +5051,20 @@ a {
   align-items: center;
   margin-bottom: 80px; }
   .home__links .links > a {
-    max-width: 25%;
-    padding: 15px 30px;
-    background-color: #e76eff;
+    width: 200px;
+    padding: 15px 0px;
     text-align: center;
-    color: #321469;
     font-size: 32px;
-    font-weight: 900;
     letter-spacing: 1px;
-    transition: all 200ms ease-in; }
+    background-color: #e76eff;
+    color: #321469;
+    font-weight: 400;
+    transition: all 200ms ease-in-out;
+    transition: font-weight 100ms linear; }
     .home__links .links > a:hover {
-      background-color: #f947ff; }
+      background-color: #00ff80;
+      color: #321469;
+      font-weight: 900; }
 
 .home__callout {
   width: 100%;
@@ -5080,10 +5083,21 @@ a {
       display: inline-block;
       margin-top: 10px; }
       .home__callout .callout__link > a {
+        display: block;
+        width: 140px;
+        padding: 8px 0px 7px 0px;
+        text-align: center;
+        font-style: normal;
+        font-size: 24px;
         background-color: #321469;
         color: #e76eff;
-        font-size: 24px;
-        padding: 8px 20px 7px 20px; }
+        font-weight: 400;
+        transition: all 200ms ease-in-out;
+        transition: font-weight 100ms linear; }
+        .home__callout .callout__link > a:hover {
+          background-color: #e76eff;
+          color: #321469;
+          font-weight: 900; }
 
 .page-id-19 .project__name {
   color: #321469;
