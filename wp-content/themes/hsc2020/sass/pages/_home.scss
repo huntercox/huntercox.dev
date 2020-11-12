@@ -48,6 +48,8 @@
         
         p {
           text-align: center;
+          font-size: 18px;
+          font-style: italic;
         }
       }//.home__intro
 
@@ -63,20 +65,21 @@
         align-items: center;
         margin-bottom: 80px;
 
-        div {
-          width: 300px;
-          padding: 15px 0;
+        > a {
+          max-width: 25%;
+          padding: 15px 30px;
           background-color: $pink_pastel;
           text-align: center;
+          color: $purple_dk;
+          font-size: 32px;
+          font-weight: 900;
+          letter-spacing: 1px;
+          transition: all 200ms ease-in;
 
-          > a {
-            color: $purple_dk;
-            font-size: 32px;
-            font-weight: 900;
-            letter-spacing: 1px;
-            transition: all 200ms
+          &:hover {
+            background-color: $pink_bright;
           }
-        }//.links__X
+        }//a 
       }//.links
     }//.home__links
 

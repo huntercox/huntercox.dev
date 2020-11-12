@@ -46,8 +46,8 @@ function hsc2020_scripts() {
 	 );
 	// wp_enqueue_style( 'hsc2020-style', get_template_directory_uri() . '/css/main.css', array(), _S_VERSION );
 
-	wp_enqueue_script( 'hsc2020-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
-	wp_enqueue_script( 'hsc2020-myscripts', get_template_directory_uri() . '/js/my-scripts.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'hsc2020-navigation', get_template_directory_uri() . '/js/navigation.js', array('jquery'), _S_VERSION, true );
+	wp_enqueue_script( 'hsc2020-myscripts', get_template_directory_uri() . '/js/my-scripts.js', array('jquery'), _S_VERSION, true );
 }
 add_action( 'wp_enqueue_scripts', 'hsc2020_scripts' );
 
@@ -74,6 +74,24 @@ function wpdocs_theme_setup() {
 		// Homepage "Hero Banner" image
     add_image_size( 'homepage-banner', 1200, 400, true ); // (cropped)
 }
+
+
+/** ============================================================================ 
+ * ACF Options page
+ */ 
+	if( function_exists('acf_add_options_page') ) {
+		
+		acf_add_options_page(array(
+			'page_title' 	=> 'Custom Data',
+			'menu_title'	=> 'My Custom Data',
+			'menu_slug' 	=> 'my-custom-data',
+			'capability'	=> 'edit_posts',
+			'redirect'		=> false
+		));
+		
+	}
+
+
 
 
 /**

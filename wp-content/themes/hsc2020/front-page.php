@@ -42,11 +42,13 @@ get_header();
 
 			<!-- Introduction -->
 				<?php if ( get_field('home_intro_section') ) : ?>
-					<p><?php echo get_field('home_intro_section'); ?></p>
+					<div class="home__intro">
+						<p><?php echo get_field('home_intro_section'); ?></p>
+					</div><!-- ./home__intro-section -->
 				<?php endif; ?>
 
 			<!-- Links -->
-					<div class="home__links-section">
+					<div class="home__links">
 					<?php
 						// Links group
 						$links = get_field('home_links_section'); 
@@ -60,30 +62,64 @@ get_header();
 								$resume_title = $resume_link->post_title;
 								$resume_ID 		= $resume_link->ID;
 								$resume_url   = get_permalink($resume_ID);
-							?>
-								<div class="links__resume">
-									<a href="<?php echo $resume_url; ?>"><?php echo $resume_title; ?></button>
-								</div>
-							<?php 
+						
+								echo '<a class="links__resume" href="'. $resume_url .'">'. $resume_title.'</a>';
+					
 							} 
 							if( $projects_link ) {
 								$projects_title = $projects_link->post_title;
 								$projects_ID 		= $projects_link->ID;
 								$projects_url   = get_permalink($projects_ID);
-							?>
-								<div class="links__projects">
-									<a href="<?php echo $projects_url; ?>"><?php echo $projects_title; ?></button>
-								</div>
-							<?php 
+								
+								echo '<a class="links__projects" href="'. esc_url($projects_url) .'">' .$projects_title.'</a>';
+								
 							}
 						endif;
 					?>
-					</div><!-- /.home__links-section -->
+					</div><!-- /.home__links -->
 				
 			</article><!-- #post-<?php the_ID(); ?> -->
 			<?php endwhile; // End of the loop. ?>
 
 		</main><!-- #main -->
+
+
+		<!-- Callout -->
+		<div class="home__callout">
+			<div class="callout container">
+			<?php
+				// Callout group
+				$callout = get_field('home_callout_section'); 
+				if ( $callout ) : 
+					$callout_headline =  $callout['callout_headline'];
+					$callout_tagline  =  $callout['callout_tagline'];
+					$callout_link 		=  $callout['callout_link'];
+
+					// Headline
+					if( $callout_headline ) {
+						echo '<h4 class="callout__headline">';
+							echo $callout_headline;
+						echo '</h4>';
+					}
+
+					// Tagline
+					if( $callout_tagline ) {
+						echo '<div class="callout__tagline">';
+							echo $callout_tagline;
+						echo '</div>';
+					}
+
+					// Link
+					if( $callout_link ) {
+						echo '<div class="callout__link">';
+							echo '<a href="mailto:'.$callout_link.'">Email me</a>';
+						echo '</div>';
+					}
+					
+				endif; // callout group
+			?>
+			</div><!-- /.callout -->
+		</div><!-- /.home__callout-section --> 
 
 <?php
 get_footer();
