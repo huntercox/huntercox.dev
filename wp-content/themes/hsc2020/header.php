@@ -25,7 +25,17 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'hsc2020' ); ?></a>
 
-	<header id="masthead" class="site-header">
+	<?php 
+		$bg_img = get_field('background_image', 'option');
+
+		if( $bg_img ) {
+			$bg_url = $bg_img['url'];
+			$atts = 'class="site-header bg-img" style="background-image:url('.$bg_url.');"';
+		} else {
+			$atts = 'class="site-header"';
+		}
+	?>
+	<header id="masthead" <?php echo $atts; ?>>
 		<div class="site-branding">
 			<?php
 			the_custom_logo();

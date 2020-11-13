@@ -4,7 +4,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: $green_pastel;
+    background-color: $green_bright;
     margin-bottom: 80px;
 
     .site-branding {
@@ -66,17 +66,16 @@
 // Footer
 .site-footer {
     margin: 15px;
+    margin-bottom: 5px;
     display: flex;
     justify-content: space-between;
 
     .site-info {
-
-
         a {
             color: $pink_pastel;
             font-size: 18px;
-        }    
-    }
+        }//a
+    }//.site-info
 
     .footer__social-links {
         display: flex;
@@ -87,7 +86,8 @@
 
             i.fab {
                 font-size: 24px;
-            }
-        }        
-    }
+            }//i.fab
+        }//li
+    }//.footer_-social-links
+    
 }//..site-footer

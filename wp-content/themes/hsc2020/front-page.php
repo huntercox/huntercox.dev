@@ -35,6 +35,7 @@ get_header();
 					</div>
 		<?php endif; ?>
 
+		
 		<main id="primary" class="site-main">
 
 			<?php while ( have_posts() ) : the_post(); ?>
@@ -82,10 +83,20 @@ get_header();
 			<?php endwhile; // End of the loop. ?>
 
 		</main><!-- #main -->
+		<?php if( $bg_img ) { echo '</div><!-- /.bg-img -->'; } ?>
 
 
 		<!-- Callout -->
-		<div class="home__callout">
+		<?php 
+			$bg_img = get_field('background_image', 'option');
+
+			if( $bg_img ) {
+				$bg_url = $bg_img['url'];
+				echo '<div class="home__callout bg-img" style="background-image:url('.$bg_url.');">';
+			} else {
+				echo '<div class="home__callout">';
+			}
+		?>
 			<div class="callout container">
 			<?php
 				// Callout group
@@ -119,7 +130,7 @@ get_header();
 				endif; // callout group
 			?>
 			</div><!-- /.callout -->
-		</div><!-- /.home__callout-section --> 
+		</div><!-- /.home__callout-section -->
 
 <?php
 get_footer();
