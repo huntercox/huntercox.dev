@@ -4,7 +4,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: $green_pastel;
+    background-color: $green_bright;
     margin-bottom: 80px;
 
     .site-branding {
@@ -66,21 +66,15 @@
 // Footer
 .site-footer {
     margin: 15px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 
     .site-info {
-
         a {
             color: $pink_pastel;
             font-size: 18px;
-            transition: color 200ms ease-in-out;
-
-            &:hover {
-                color: $green_bright;
-            }
         }//a
     }//.site-info
 
@@ -91,20 +85,10 @@
         li {
             margin: 5px 10px;
 
-            a {
-                color: $green_pastel;
-                transition: color 200ms ease-in-out;
+            i.fab {
+                font-size: 24px;
+            }//i.fab
+        }//li
+    }//.footer_-social-links
     
-                &:hover {
-                    color: $pink_bright;     
-                }
-                
-                i.fab {
-                    font-size: 24px;
-                    color: inherit;
-                }
-            }
-            
-        }        
-    }
 }//..site-footer
