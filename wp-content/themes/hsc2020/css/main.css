@@ -4989,6 +4989,7 @@ a {
 
 .site-footer {
   margin: 15px;
+  margin-bottom: 5px;
   display: flex;
   justify-content: space-between; }
   .site-footer .site-info a {
