@@ -30,7 +30,7 @@ html {
   /* www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */ }
 
 body {
-  background: #fff; }
+  background: #321469; }
 
 article,
 aside,
@@ -4991,7 +4991,8 @@ a {
   margin: 15px;
   margin-bottom: 5px;
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+  align-items: center; }
   .site-footer .site-info a {
     color: #e76eff;
     font-size: 18px; }
