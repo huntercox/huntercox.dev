@@ -29,6 +29,17 @@
         right: 0;
         top: 60px;
 
+        @media (min-width: $breakpoint-phone) {
+            background-color: transparent;
+            border-top: none;
+            padding: 0;
+            display: block;
+            position: relative;
+            z-index: 1;
+            right: auto;
+            top: auto;
+        }
+
         li {
             margin: 6px 12px 24px 12px;
             
@@ -37,8 +48,8 @@
             }
 
             @media (min-width: $breakpoint-phone) {
-                margin-top: 4px;
-                margin-right: 15px;
+                margin: 0;
+                margin-right: 30px;
             }
             
 
@@ -47,18 +58,14 @@
             }
             
         }// li
-
         
-        @media (min-width: $breakpoint-phone) {
-            display: block;
-            position: absolute;
-            z-index: 99999;
-            bottom: 0;
-
-        }
-        
-        > ul.menu {
+        ul.menu {
             display: flex;
+            flex-direction: column;
+
+            @media (min-width: $breakpoint-phone) {
+                flex-direction: row;
+            }
         }
     }//.main-navigation
 
@@ -91,6 +98,10 @@
                 border: none !important;
                 outline: none !important;
                 color: $purple_lt !important;
+            }
+
+            @media (min-width: $breakpoint-phone) {
+                display: none;
             }
         }//.hamburger
 }//.site-header

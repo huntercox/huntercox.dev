@@ -5648,24 +5648,32 @@ a {
     z-index: 99;
     right: 0;
     top: 60px; }
+    @media (min-width: 567px) {
+      .site-header .main-navigation {
+        background-color: transparent;
+        border-top: none;
+        padding: 0;
+        display: block;
+        position: relative;
+        z-index: 1;
+        right: auto;
+        top: auto; } }
     .site-header .main-navigation li {
       margin: 6px 12px 24px 12px; }
       .site-header .main-navigation li:last-child {
         margin-bottom: 4px; }
       @media (min-width: 567px) {
         .site-header .main-navigation li {
-          margin-top: 4px;
-          margin-right: 15px; } }
+          margin: 0;
+          margin-right: 30px; } }
       .site-header .main-navigation li a {
         font-size: 20px; }
-    @media (min-width: 567px) {
-      .site-header .main-navigation {
-        display: block;
-        position: absolute;
-        z-index: 99999;
-        bottom: 0; } }
-    .site-header .main-navigation > ul.menu {
-      display: flex; }
+    .site-header .main-navigation ul.menu {
+      display: flex;
+      flex-direction: column; }
+      @media (min-width: 567px) {
+        .site-header .main-navigation ul.menu {
+          flex-direction: row; } }
   .site-header p {
     margin-bottom: 0; }
   .site-header a {
@@ -5687,6 +5695,9 @@ a {
       border: none !important;
       outline: none !important;
       color: #4e2699 !important; }
+    @media (min-width: 567px) {
+      .site-header .hamburger {
+        display: none; } }
 
 .site-main .entry-header {
   background-color: #e76eff;
