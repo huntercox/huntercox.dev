@@ -5628,11 +5628,12 @@ a {
 
 .site-header {
   width: 100%;
-  height: 40px;
+  height: 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #00ff80;
+  border-bottom: 2px solid #321469;
   margin-bottom: 80px;
   position: relative; }
   .site-header .site-branding {
@@ -5657,7 +5658,7 @@ a {
     position: absolute;
     z-index: 99;
     right: 0;
-    top: 60px; }
+    top: 50px; }
     @media (min-width: 567px) {
       .site-header .main-navigation {
         background-color: transparent;
@@ -5724,11 +5725,13 @@ a {
     padding-left: 10%; }
 
 .site-footer {
-  padding: 5px;
-  padding-bottom: 5px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 5px;
+  padding-bottom: 5px;
+  margin-top: 80px;
+  border-top: 2px solid #f947ff;
   background-color: #e76eff; }
   .site-footer .site-info {
     margin-left: 10px; }

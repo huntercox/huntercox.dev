@@ -1,11 +1,12 @@
 // Header
 .site-header {
     width: 100%;
-    height: 40px;
+    height: 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: $green_bright;
+    border-bottom: 2px solid $purple_dk;
     margin-bottom: 80px;
     position: relative;
 
@@ -41,7 +42,7 @@
         position: absolute;
         z-index: 99;
         right: 0;
-        top: 60px;
+        top: 50px;
 
         @media (min-width: $breakpoint-phone) {
             background-color: transparent;
@@ -106,24 +107,24 @@
     }//a
 
     // Hamburger
-        .hamburger {
-            background-color: transparent;
-            color: $purple_dk !important;
-            transition: color 200ms linear;
+    .hamburger {
+        background-color: transparent;
+        color: $purple_dk !important;
+        transition: color 200ms linear;
 
-            &:hover {
-                color: $purple_lt;
-            }
-            &:focus {
-                border: none !important;
-                outline: none !important;
-                color: $purple_lt !important;
-            }
+        &:hover {
+            color: $purple_lt;
+        }
+        &:focus {
+            border: none !important;
+            outline: none !important;
+            color: $purple_lt !important;
+        }
 
-            @media (min-width: $breakpoint-phone) {
-                display: none;
-            }
-        }//.hamburger
+        @media (min-width: $breakpoint-phone) {
+            display: none;
+        }
+    }//.hamburger
 }//.site-header
 
 
@@ -149,11 +150,13 @@
 
 // Footer
 .site-footer {
-    padding: 5px;
-    padding-bottom: 5px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 5px;
+    padding-bottom: 5px;
+    margin-top: 80px;
+    border-top: 2px solid $pink_bright;
     background-color: $pink_pastel;
 
     .site-info {
