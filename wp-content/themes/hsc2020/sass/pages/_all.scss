@@ -1,11 +1,13 @@
 // Header
 .site-header {
     width: 100%;
+    height: 60px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: $green_bright;
     margin-bottom: 80px;
+    position: relative;
 
     .site-branding {
         padding-left: 20px;
@@ -14,20 +16,55 @@
             font-weight: 700;
         }
         
-    }
+    }//.site-branding
 
+    // Nav Wrapper
     .main-navigation {
-        padding-right: 20px;
+        background-color: $green_pastel;
+        border-top: 2px solid $purple_dk;
+        padding: 10px 25px;
+        display: none;
+        position: absolute;
+        z-index: 99;
+        right: 0;
+        top: 60px;
 
         li {
-            margin-top: 4px;
-            margin-right: 15px;
+            margin: 6px 12px 24px 12px;
+            
+            &:last-child {
+                margin-bottom: 4px;
+            }
+
+            @media (min-width: $breakpoint-phone) {
+                margin-top: 4px;
+                margin-right: 15px;
+            }
+            
+
+            a {
+                font-size: 20px;
+            }
+            
+        }// li
+
+        
+        @media (min-width: $breakpoint-phone) {
+            display: block;
+            position: absolute;
+            z-index: 99999;
+            bottom: 0;
+
         }
-    }
+        
+        > ul.menu {
+            display: flex;
+        }
+    }//.main-navigation
 
     p {
         margin-bottom: 0;
-    }
+    }//p
     a {
         color: $purple_dk;
         line-height: 20px;
@@ -39,7 +76,23 @@
         &:hover {
             border-bottom-color: $purple_dk;
         }
-    }
+    }//a
+
+    // Hamburger
+        .hamburger {
+            background-color: transparent;
+            color: $purple_dk !important;
+            transition: color 200ms linear;
+
+            &:hover {
+                color: $purple_lt;
+            }
+            &:focus {
+                border: none !important;
+                outline: none !important;
+                color: $purple_lt !important;
+            }
+        }//.hamburger
 }//.site-header
 
 
