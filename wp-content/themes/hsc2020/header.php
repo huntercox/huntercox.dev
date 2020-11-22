@@ -54,8 +54,14 @@
 			<?php endif; ?>
 		</div><!-- .site-branding -->
 
+		<button class="hamburger hamburger--squeeze" type="button"
+        aria-label="Menu" aria-controls="site-navigation">
+			<span class="hamburger-box">
+				<span class="hamburger-inner"></span>
+			</span>
+		</button><!-- /.hamburger--squeeze -->
+
 		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'hsc2020' ); ?></button>
 			<?php
 			wp_nav_menu(
 				array(
