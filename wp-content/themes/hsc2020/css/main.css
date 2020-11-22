@@ -5772,25 +5772,41 @@ a {
 .home .hero__bg-img {
   background-position: center;
   background-size: cover;
-  height: 300px;
-  max-height: 300px; }
+  height: 260px;
+  max-height: 260px; }
+  @media (min-width: 567px) {
+    .home .hero__bg-img {
+      height: 300px;
+      max-height: 300px; } }
 
 .home .hero__overlay {
-  position: absolute;
-  bottom: 8%;
-  right: 10%;
-  left: auto;
-  width: 35%;
-  max-width: 40%;
   padding: 10px 20px 14px 10px;
   background-color: #321469;
   background-blend-mode: multiply;
-  border: 4px double #f947ff; }
+  border: 4px double #f947ff;
+  position: absolute;
+  width: 54%;
+  max-width: none;
+  top: 6%;
+  bottom: auto;
+  right: 6%; }
+  @media (min-width: 567px) {
+    .home .hero__overlay {
+      padding: 16px 26px 18px 26px;
+      width: 40%;
+      max-width: 40%;
+      top: auto;
+      bottom: 8%;
+      right: 10%;
+      left: auto; } }
 
 .home .hero__headline {
   color: #e76eff;
   text-align: right;
-  font-size: 24px; }
+  font-size: 20px; }
+  @media (min-width: 567px) {
+    .home .hero__headline {
+      font-size: 24px; } }
 
 .home .hero__tagline {
   line-height: 1.25;
