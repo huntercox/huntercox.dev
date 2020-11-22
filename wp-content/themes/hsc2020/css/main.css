@@ -5814,12 +5814,21 @@ a {
   text-align: right; }
 
 .home__intro {
-  margin: 60px 0; }
+  margin: 40px 0; }
+  @media (min-width: 567px) {
+    .home__intro {
+      margin: 60px 0; } }
   .home__intro p {
-    text-align: center;
-    font-size: 20px;
     font-weight: 700;
-    letter-spacing: 1px; }
+    letter-spacing: 1px;
+    text-align: left;
+    font-size: 16px;
+    line-height: 1.4; }
+    @media (min-width: 567px) {
+      .home__intro p {
+        text-align: center;
+        font-size: 20px;
+        line-height: normal; } }
     .home__intro p strong {
       color: #e76eff; }
 
@@ -5827,7 +5836,12 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 80px; }
+  flex-direction: column;
+  margin-bottom: 40px; }
+  @media (min-width: 567px) {
+    .home__links .links {
+      flex-direction: row;
+      margin-bottom: 80px; } }
   .home__links .links > a {
     width: 200px;
     height: 60px;
@@ -5836,17 +5850,25 @@ a {
     font-size: 32px;
     line-height: 1.9;
     letter-spacing: 1px;
-    background-color: #e76eff;
-    color: #321469;
+    background-color: #5fffaf;
     border: 4px outset #e76eff;
-    font-weight: 400;
-    transition: all 200ms ease-in-out;
-    transition: font-weight 100ms linear, border 100ms linear; }
-    .home__links .links > a:hover {
-      background-color: #00ff80;
-      border: 4px inset #f947ff;
-      color: #321469;
-      font-weight: 900; }
+    color: #321469;
+    font-weight: 900; }
+    @media (min-width: 567px) {
+      .home__links .links > a {
+        background-color: #5fffaf;
+        border: 4px outset #e76eff;
+        color: #321469;
+        font-weight: 400;
+        transition: all 200ms ease-in-out;
+        transition: font-weight 100ms linear, border 100ms linear; }
+        .home__links .links > a:hover {
+          background-color: #00ff80;
+          border: 4px inset #f947ff;
+          color: #321469;
+          font-weight: 900; } }
+  .home__links .links__resume {
+    margin-bottom: 20px; }
 
 .home__callout {
   width: 100%;

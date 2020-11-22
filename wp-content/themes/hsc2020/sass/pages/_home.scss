@@ -74,13 +74,24 @@
   // Intro 
   // =========================================
       &__intro {
-        margin: 60px 0;
+        margin: 40px 0;
+
+        @media (min-width: $breakpoint-phone) {
+          margin: 60px 0;
+        }
         
         p {
-          text-align: center;
-          font-size: 20px;
           font-weight: 700;
           letter-spacing: 1px;
+          text-align: left;
+          font-size: 16px;
+          line-height: 1.4;
+
+          @media (min-width: $breakpoint-phone) {
+            text-align: center;
+            font-size: 20px;
+            line-height: normal;
+          }
 
           strong {
             color: $pink_pastel;
@@ -98,7 +109,13 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-bottom: 80px;
+        flex-direction: column;
+        margin-bottom: 40px;
+
+        @media (min-width: $breakpoint-phone) {
+          flex-direction: row;
+          margin-bottom: 80px;
+        }
 
         > a {
           width: 200px;
@@ -109,20 +126,33 @@
           line-height: 1.9;
           letter-spacing: 1px;
             
-          background-color: $pink_pastel;
-          color: $purple_dk;
+          background-color: $green_pastel;
           border: 4px outset $pink_pastel;
-          font-weight: 400;
-          transition: all 200ms ease-in-out;
-          transition: font-weight 100ms linear, border 100ms linear;
+          color: $purple_dk;
+          font-weight: 900;
 
-          &:hover {
-            background-color: $green_bright;
-            border: 4px inset $pink_bright;
+          @media (min-width: $breakpoint-phone) {
+            background-color: $green_pastel;
+            border: 4px outset $pink_pastel;
             color: $purple_dk;
-            font-weight: 900;
-          }
+            font-weight: 400;
+            transition: all 200ms ease-in-out;
+            transition: font-weight 100ms linear, border 100ms linear;
+
+            &:hover {
+              background-color: $green_bright;
+              border: 4px inset $pink_bright;
+              color: $purple_dk;
+              font-weight: 900;
+            }
+          }//@media
+          
         }//a 
+
+        &__resume {
+          margin-bottom: 20px;
+        }//.links__resume
+
       }//.links
     }//.home__links
 
