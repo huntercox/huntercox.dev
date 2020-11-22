@@ -5903,21 +5903,43 @@ a {
           color: #321469;
           font-weight: 900; }
 
-.page-id-19 .project__name {
-  color: #321469;
-  background-color: #5fffaf;
-  font-size: 24px;
-  font-weight: bold;
-  padding-left: 15px;
-  margin-bottom: 4px;
-  transition: background-color 300ms ease-in-out .page-id-19 .project__name; }
-  .page-id-19 .project__name :hover {
-    cursor: pointer;
-    background-color: #00ff80; }
-
-.page-id-19 .project__type {
-  margin-bottom: 4px; }
-
-.page-id-19 .project__description p {
-  font-size: 16px;
-  line-height: 1.2; }
+.page-id-19 .project {
+  margin-bottom: 10px; }
+  .page-id-19 .project__name {
+    color: #321469;
+    background-color: #5fffaf;
+    font-weight: bold;
+    transition: background-color 100ms linear;
+    font-size: 20px;
+    line-height: 1.2;
+    padding: 6px 10px 4px 10px;
+    margin: 0; }
+    @media (min-width: 567px) {
+      .page-id-19 .project__name {
+        font-size: 24px;
+        line-height: normal;
+        padding-left: 15px;
+        margin-bottom: 4px; } }
+    .page-id-19 .project__name:hover {
+      cursor: pointer;
+      background-color: #00ff80; }
+  .page-id-19 .project__type {
+    margin-bottom: 4px; }
+  .page-id-19 .project__description p {
+    font-size: 14px;
+    line-height: 1.4; }
+    @media (min-width: 567px) {
+      .page-id-19 .project__description p {
+        font-size: 16px;
+        line-height: 1.2; } }
+  .page-id-19 .project__description ul {
+    list-style-type: circle;
+    padding-left: 25px; }
+    .page-id-19 .project__description ul li {
+      line-height: 1.2;
+      margin-bottom: 4px;
+      color: #ececec; }
+  .page-id-19 .project .toggle-target {
+    display: none;
+    padding: 10px;
+    background-color: #220b4d; }

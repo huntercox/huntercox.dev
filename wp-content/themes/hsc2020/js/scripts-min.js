@@ -1,1 +1,0 @@
-!function(g){g(".toggler").on("click",(function(){g(".toggle-target").toggle()}))}(jQuery);
