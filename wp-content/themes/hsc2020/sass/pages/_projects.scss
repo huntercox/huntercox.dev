@@ -40,23 +40,27 @@
                 }
             }// p
 
-            ul {
-                list-style-type: circle;
-                padding-left: 25px;
-
-                li {
-                    line-height: 1.2;
-                    margin-bottom: 4px;
-                    color: #ececec;
-                }
-            }// ul
+            
         }//.project__description
-
-        // toggle
-        .toggle-target {
-            display: none;
-            padding: 10px;
-            background-color: $purple_darker;
-        }//.toggle-target
+        
+        &__contributions {
+            list-style-type: circle;
+            padding-left: 25px;
+    
+            li {
+                line-height: 1.2;
+                margin-bottom: 4px;
+                color: #ececec;
+            }
+        }// ul
     }//.project
+
+    // toggle
+    .toggle-target {
+        display: none;
+        padding: 10px;
+        background-color: $purple_darker;
+    }//.toggle-target
+
+    
 }//.page-id-19  = PROJECTS page

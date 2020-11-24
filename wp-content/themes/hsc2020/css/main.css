@@ -5938,14 +5938,15 @@ a {
       .page-id-19 .project__description p {
         font-size: 16px;
         line-height: 1.2; } }
-  .page-id-19 .project__description ul {
+  .page-id-19 .project__contributions {
     list-style-type: circle;
     padding-left: 25px; }
-    .page-id-19 .project__description ul li {
+    .page-id-19 .project__contributions li {
       line-height: 1.2;
       margin-bottom: 4px;
       color: #ececec; }
-  .page-id-19 .project .toggle-target {
-    display: none;
-    padding: 10px;
-    background-color: #220b4d; }
+
+.page-id-19 .toggle-target {
+  display: none;
+  padding: 10px;
+  background-color: #220b4d; }

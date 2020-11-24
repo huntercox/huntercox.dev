@@ -83,14 +83,32 @@ get_header();
 			while($projects_posts->have_posts()) : 
 					$projects_posts->the_post();
 		?>
-
-					<h1><?php the_title() ?></h1>
-					<div class='post-content'><?php the_content() ?></div>      
+				<div class="project__label toggler">
+					<p class="project__name"><?php the_title() ?></p>
+				</div><!-- /.project__label -->
+			
+				<div class="project__details toggle-target">
+					<div class="project__type"><span>Type:</span>
 					<?php
 					$project_employer = get_field('project_employer');
 					if( $project_employer ): ?>
-							<h3><?php echo esc_html( $project_employer->post_title ); ?></h3>
-					<?php endif; ?>
+							<p><?php echo esc_html( $project_employer->post_title ); ?></p>
+					<?php endif; ?></div>
+					<div class="project__description"><?php the_content() ?></div>
+					<?php
+						$contributions = get_field('project_contributions');
+						if( $contributions ) {
+								echo '<ul class="project__contributions">';
+								foreach( $contributions as $contrib ) {
+										echo '<li>';
+												echo $contrib['contribution'];
+										echo '</li>';
+								}
+								echo '</ul>';
+						} 
+					?>
+				</div><!-- /.toggle-target -->
+					
 		<?php
 			endwhile;
 		else: 
