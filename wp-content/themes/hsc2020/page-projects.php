@@ -26,49 +26,80 @@ get_header();
 		?>
 
 		<?php
-		$args = array('post_type' => 'employer');
-		$employers = get_posts( $args );
+		// $args = array('post_type' => 'employer');
+		// $employers = get_posts( $args );
 		
-		foreach($employers as $job):
+		// foreach($employers as $job):
 		
-			$employer_name = $job->post_title;
-			$employer_ID   = $job->ID;
+		// 	$employer_name = $job->post_title;
+		// 	$employer_ID   = $job->ID;
 
-			// list Projects within each employer
-			$projects = get_field('project_list', $employer_ID);
-			if( $projects ) :
-				echo '<ul class="projects">';
-				$i = 0;
-				foreach( $projects as $project ) {
-					$i++;
-					if ( $project ) { echo '<li class="project">'; }
+		// 	// list Projects within each employer
+		// 	$projects = get_field('project_list', $employer_ID);
+		// 	if( $projects ) :
+		// 		echo '<ul class="projects">';
+		// 		$i = 0;
+		// 		foreach( $projects as $project ) {
+		// 			$i++;
+		// 			if ( $project ) { echo '<li class="project">'; }
 					
-						$name = $project['project_name'];
-						$type = $project['project_type']['value'];
-						$desc = $project['project_description'];
+		// 				$name = $project['project_name'];
+		// 				$type = $project['project_type']['value'];
+		// 				$desc = $project['project_description'];
 				?>	
-						<div class="project__label toggler">
-							<p class="project__name"><?php echo $name; ?></p>
+						<!-- <div class="project__label toggler">
+							<p class="project__name"><?php //echo $name; ?></p>
 						</div>
 						<div class="project__details toggle-target">
-							<p class="project__type"><span>Type:</span><?php echo $type; ?></p>
-							<div class="project__description"><?php echo $desc; ?></div>
+							<p class="project__type"><span>Type:</span><?php //echo $type; ?></p>
+							<div class="project__description"><?php //echo $desc; ?></div>
 							<?php 
-								if ( $project ) { 
-									echo '<p class="project__employer">'.$employer_name.'</p>';
-								}
+								// if ( $project ) { 
+								// 	echo '<p class="project__employer">'.$employer_name.'</p>';
+								// }
 							?>
-						</div><!-- /.toggle-target -->
+						</div>/.toggle-target -->
 						
 				<?php
-					if ( $project ) {
-						echo '</li>'; 
-					}
-				}
-				echo '</ul>';
-			endif;
+		// 			if ( $project ) {
+		// 				echo '</li>'; 
+		// 			}
+		// 		}
+		// 		echo '</ul>';
+		// 	endif;
 
-		endforeach;
+		// endforeach;
+		?>
+
+
+		<?php
+		$args = array(
+			'post_type' => 'project',
+			'post_status' => 'publish'
+		);
+		$projects_posts = new WP_Query($args);
+
+		if($projects_posts->have_posts()) : 
+			while($projects_posts->have_posts()) : 
+					$projects_posts->the_post();
+		?>
+
+					<h1><?php the_title() ?></h1>
+					<div class='post-content'><?php the_content() ?></div>      
+					<?php
+					$project_employer = get_field('project_employer');
+					if( $project_employer ): ?>
+							<h3><?php echo esc_html( $project_employer->post_title ); ?></h3>
+					<?php endif; ?>
+		<?php
+			endwhile;
+		else: 
+		?>
+
+			Oops, there are no posts.
+
+		<?php
+		endif;
 		?>
 
 	</main><!-- #main -->

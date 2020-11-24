@@ -7,8 +7,12 @@
     align-items: center;
     background-color: $green_bright;
     border-bottom: 2px solid $purple_dk;
-    margin-bottom: 80px;
     position: relative;
+    margin-bottom: 40px;
+
+    @media (min-width: $breakpoint-phone) {
+        margin-bottom: 80px;
+    }
 
     .site-branding {
         padding-left: 20px;
@@ -133,17 +137,20 @@
     @extend .container;
 
     .entry-header {
-        background-color: $pink_pastel;
-        position: relative;
-        left: -15%;
-
-        // Page Title
         h1 {
-            color: $purple_dk;
+            color: $pink_bright;
+            font-size: 36px;
             font-weight: 900;
-            padding-left: 10%;
+            letter-spacing: 1px;
+            padding-bottom: 0px;
+            border-bottom: 2px solid $pink_bright;
+            margin-bottom: 10px;
+
+            @media (min-width: $breakpoint-phone) {
+                font-size: 48px;
+            }
         }
-    }
+    }//.entry-header
 
 }//.site-main
 

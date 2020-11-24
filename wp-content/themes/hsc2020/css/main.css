@@ -5634,8 +5634,11 @@ a {
   align-items: center;
   background-color: #00ff80;
   border-bottom: 2px solid #321469;
-  margin-bottom: 80px;
-  position: relative; }
+  position: relative;
+  margin-bottom: 40px; }
+  @media (min-width: 567px) {
+    .site-header {
+      margin-bottom: 80px; } }
   .site-header .site-branding {
     padding-left: 20px; }
     .site-header .site-branding .site-title {
@@ -5715,14 +5718,17 @@ a {
       .site-header .hamburger {
         display: none; } }
 
-.site-main .entry-header {
-  background-color: #e76eff;
-  position: relative;
-  left: -15%; }
-  .site-main .entry-header h1 {
-    color: #321469;
-    font-weight: 900;
-    padding-left: 10%; }
+.site-main .entry-header h1 {
+  color: #f947ff;
+  font-size: 36px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  padding-bottom: 0px;
+  border-bottom: 2px solid #f947ff;
+  margin-bottom: 10px; }
+  @media (min-width: 567px) {
+    .site-main .entry-header h1 {
+      font-size: 48px; } }
 
 .site-footer {
   display: flex;
