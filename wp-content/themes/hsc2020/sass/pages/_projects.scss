@@ -1,0 +1,73 @@
+// Projects page 
+.page-id-19 {
+    .projects{
+
+    }//ul.projects
+
+    .project {
+        margin-bottom: 10px;
+        width: 100%;
+
+        
+        &__name {
+            color: $purple_dk;
+            background-color: $green_pastel;
+            font-weight: bold;
+            transition: background-color 100ms linear;
+            font-size: 20px;
+            line-height: 1.2;
+            padding: 6px 10px 4px 10px;
+            margin: 0;
+
+            @media (min-width: $breakpoint-phone) {
+                font-size: 24px;
+                line-height: normal;
+                padding-left: 15px;
+                margin-bottom: 4px;
+            }
+            
+            &:hover {
+                cursor: pointer;
+                background-color: $green_bright;
+            }
+        }//.project__name
+
+        &__type {
+            margin-bottom: 4px;
+        }//.project__type
+
+        &__description {
+            p {
+                font-size: 14px;
+                line-height: 1.4;
+                
+                @media (min-width: $breakpoint-phone) {
+                    font-size: 16px;
+                    line-height: 1.2;
+                }
+            }// p
+
+            
+        }//.project__description
+        
+        &__contributions {
+            list-style-type: circle;
+            padding-left: 25px;
+    
+            li {
+                line-height: 1.2;
+                margin-bottom: 4px;
+                color: #ececec;
+            }
+        }// ul
+    }//li.project + namespace
+
+    // toggle
+    .toggle-target {
+        display: none;
+        padding: 10px;
+        background-color: $purple_darker;
+    }//.toggle-target
+
+    
+}//.page-id-19  = PROJECTS page

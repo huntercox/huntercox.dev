@@ -1,0 +1,27 @@
+.page-id-19 {
+    .project {
+        &__name {
+            color: $purple_dk;
+            background-color: $green_pastel;
+            font-size: 24px;
+            font-weight: bold;
+            padding-left: 15px;
+            margin-bottom: 4px;
+            transition: background-color 300ms ease-in-out
+            
+            &:hover {
+                cursor: pointer;
+                background-color: $green_bright;
+            }
+        }
+        &__type {
+            margin-bottom: 4px;
+        }
+        &__description {
+            p {
+                font-size: 16px;
+                line-height: 1.2;
+            }
+        }
+    }//.project
+}//.page-id-19  = PROJECTS page
