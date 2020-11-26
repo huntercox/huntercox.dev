@@ -1,0 +1,63 @@
+// Header
+.site-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $green_pastel;
+    margin-bottom: 80px;
+
+    .site-branding {
+        padding-left: 20px;
+        
+        .site-title  {
+            font-weight: 700;
+        }
+        
+    }
+
+    .main-navigation {
+        padding-right: 20px;
+
+        li {
+            margin-top: 4px;
+            margin-right: 15px;
+        }
+    }
+
+    p {
+        margin-bottom: 0;
+    }
+    a {
+        color: $purple_dk;
+        line-height: 20px;
+        border-bottom-style: solid;
+        border-bottom-width: 2px;
+        border-bottom-color: $green_pastel;
+        transition: border-bottom-color 200ms linear;
+        
+        &:hover {
+            border-bottom-color: $purple_dk;
+        }
+    }
+}//.site-header
+
+
+// Body 
+.site-main {
+    @extend .container;
+
+    .entry-header {
+        background-color: $pink_pastel;
+        position: relative;
+        left: -15%;
+
+        // Page Title
+        h1 {
+            color: $purple_dk;
+            font-weight: 900;
+            padding-left: 10%;
+        }
+    }
+
+}//.site-main

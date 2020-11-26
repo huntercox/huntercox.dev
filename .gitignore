@@ -1,0 +1,16 @@
+# ignore log files and databases
+*.log
+*.sql
+*.sqlite
+
+# Mac OS
+.DS_Store
+
+# Codekit
+config.codekit3
+
+# VS Code
+*.code-workspace
+
+# Node dependencies
+node_modules/
