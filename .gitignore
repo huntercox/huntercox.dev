@@ -1,27 +1,21 @@
-!.gitignore
+
 
 # ignore everything in the root
-./*
-wp-admin/*
-wp-includes/*
-
-# ignore everything in the root except the "wp-content" directory.
+/*
+# except the "wp-content" directory
 !wp-content/
+# and the ".gitignore" file
+!.gitignore
 
 # ignore everything in the "wp-content" directory, except:
-# "mu-plugins", "plugins", "themes" directory
+# "mu-plugins", "themes" directory
 wp-content/*
 !wp-content/mu-plugins/
 !wp-content/themes/
-
-# ignore these plugins
-wp-content/plugins/*
-
 # ignore specific themes
 wp-content/themes/twenty*/
-
-# ignore node dependency directories
-node_modules/
+# ignore these plugins
+wp-content/plugins/*
 
 # ignore log files and databases
 *.log
@@ -29,11 +23,12 @@ node_modules/
 *.sqlite
 .DS_Store
 
+
 # Codekit
 config.codekit3
 
 # VS Code
 *.code-workspace
 
-# Original _underscores Sass structure
-og_sass/
+# Node dependencies
+node_modules/
