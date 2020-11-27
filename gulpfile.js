@@ -11,7 +11,7 @@ function styles() {
       // 2. pass file to Sass Compiler
       .pipe(sass())
       // 3. locate destination for compiled CSS 
-      .pipe(gulp.dest('./css/'))
+      .pipe(gulp.dest('./'))
       // 4. stream changes to all browsers
       .pipe(browserSync.stream())
 }
