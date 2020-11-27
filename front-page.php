@@ -83,12 +83,14 @@ get_header();
 			<?php endwhile; // End of the loop. ?>
 
 		</main><!-- #main -->
-		<?php if( $bg_img ) { echo '</div><!-- /.bg-img -->'; } ?>
+		<?php 
+			$bg_img = get_field('background_image', 'option');
+			
+			if( $bg_img ) { echo '</div><!-- /.bg-img -->'; } ?>
 
 
 		<!-- Callout -->
 		<?php 
-			$bg_img = get_field('background_image', 'option');
 
 			if( $bg_img ) {
 				$bg_url = $bg_img['url'];

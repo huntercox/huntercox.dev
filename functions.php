@@ -135,13 +135,20 @@ function wpdocs_theme_setup() {
 
 function hsc2020_scripts() {
 	// Stylesheet (CSS)
-	wp_enqueue_style(
-		'hsc2020-style',
-		get_stylesheet_directory_uri() . 'style.css',
-		array(),
-		filemtime( get_stylesheet_directory() . 'style.css' )
-	 );
+		wp_enqueue_style(
+			'hsc2020-style',
+			get_stylesheet_directory_uri() . '/style.css',
+			array(),
+			filemtime( get_stylesheet_directory() . '/style.css' )
+		);
+		
 	// Scripts (JavaScript)
-	wp_enqueue_script( 'hsc2020-myscripts', get_template_directory_uri() . '/js/my-scripts.js', array('jquery'), _S_VERSION, true );
+		wp_enqueue_script( 
+			'hsc2020-myscripts', 
+			get_template_directory_uri() . '/js/my-scripts.js', 
+			array('jquery'), 
+			_S_VERSION, 
+			true 
+		);
 }
 add_action( 'wp_enqueue_scripts', 'hsc2020_scripts' );
