@@ -8,6 +8,12 @@
         margin-bottom: 10px;
         width: 100%;
 
+        &__heading {
+            font-size: 20px;
+            font-weight: bolder;
+            text-decoration: underline;
+            margin-bottom: 10px;
+        }//.project__heading
         
         &__name {
             color: $purple_dk;
@@ -32,34 +38,86 @@
             }
         }//.project__name
 
-        &__type {
-            margin-bottom: 4px;
-        }//.project__type
+        &__details {
+            display: flex;
+            flex-direction: column;
 
-        &__description {
-            p {
-                font-size: 14px;
-                line-height: 1.4;
-                
-                @media (min-width: $breakpoint-phone) {
-                    font-size: 16px;
-                    line-height: 1.2;
-                }
-            }// p
-
-            
-        }//.project__description
-        
-        &__contributions {
-            list-style-type: circle;
-            padding-left: 25px;
-    
-            li {
-                line-height: 1.2;
-                margin-bottom: 4px;
-                color: #ececec;
+            @media (min-width: $breakpoint-phone) {
+                flex-direction: row;
             }
-        }// ul
+        }//.project__details
+            
+
+            &__contributions {
+                flex: 2;
+                padding: 8px;
+
+                @media (min-width: $breakpoint-phone) {
+                    padding: 15px;
+                }
+
+
+                .project__heading {
+                    color: $pink_pastel;
+                    margin-right: 12px;
+                }//.project__heading
+
+                &_list {
+                    list-style-type: circle;
+                    padding-left: 20px;
+
+                    @media (min-width: $breakpoint-phone) {
+                        font-size: 18px;
+                        padding-left: 30px;
+                        padding-right: 30px;
+                    }
+                    
+                    li {
+                        color: $pink_pastel;
+                        font-size: 15px;
+                        line-height: 1.2;
+                        padding-bottom: 8px;
+                        border-bottom: 1px solid rgba(255,255,255,0.25);
+                        margin-bottom: 8px;
+
+                        &:last-child {
+                            border-bottom: none;
+                        }
+
+                        @media (min-width: $breakpoint-phone) {
+                            font-size: 18px;
+                        }
+                    }//li
+                }//.project__contributions_list
+
+            }//.project__contributions
+
+            &__description {
+                flex: 2;
+                padding: 8px;
+
+                @media (min-width: $breakpoint-phone) {
+                    padding: 15px;
+                }
+
+                .project__heading {
+                    color: #fff;
+                    border-bottom-color: $pink_pastel;
+                }//.project__heading
+
+                p {
+                    font-size: 14px;
+                    line-height: 1.4;
+                    margin-bottom: 10px;
+                    
+                    @media (min-width: $breakpoint-phone) {
+                        font-size: 16px;
+                        line-height: 1.2;
+                    }
+                }// p
+                
+            }//.project__description
+
     }//li.project + namespace
 
     // toggle
