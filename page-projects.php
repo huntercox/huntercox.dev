@@ -48,31 +48,35 @@ get_header();
 					$projects_posts->the_post();
 		?>
 			<li class="project">
-				<div class="project__name toggler">
-					<?php the_title() ?></p>
-				</div><!-- /.project__name -->
-			
-				<div class="project__details toggle-target">
-					<div class="project__type"><span>Type:</span>
-					<?php
-					$project_employer = get_field('project_employer');
-					if( $project_employer ): ?>
-							<p><?php echo esc_html( $project_employer->post_title ); ?></p>
-					<?php endif; ?></div>
-					<div class="project__description"><?php the_content() ?></div>
-					<?php
-						$contributions = get_field('project_contributions');
-						if( $contributions ) {
-								echo '<ul class="project__contributions">';
-								foreach( $contributions as $contrib ) {
-										echo '<li>';
-												echo $contrib['contribution'];
-										echo '</li>';
-								}
-								echo '</ul>';
-						} 
-					?>
+				<div class="toggler">
+					<h2 class="project__name"><?php the_title() ?></h2><!-- /.project__name -->
+				</div><!-- /.toggler -->
+				
+				<div class="toggle-target">
+					<div class="project__details">
+						<?php
+							$contributions = get_field('project_contributions');
+							if( $contributions ) {
+								echo '<div class="project__contributions">';
+									echo '<h3 class="project__heading">Contributions</h3>';
+									echo '<ul class="project__contributions_list">';
+									foreach( $contributions as $contrib ) {
+											echo '<li>';
+													echo $contrib['contribution'];
+											echo '</li>';
+									}
+									echo '</ul>';
+								echo '</div><!-- /.project__contributions -->';
+							} 
+						?>
+						<div class="project__description">
+							<h3 class="project__heading">Back Story</h3>
+							<?php the_content() ?>
+						</div><!-- /.project__description -->
+
+					</div><!-- /.project__details -->
 				</div><!-- /.toggle-target -->
+
 			</li><!-- /.project -->
 		<?php
 			endwhile;

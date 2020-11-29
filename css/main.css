@@ -5912,6 +5912,11 @@ a {
 .page-id-19 .project {
   margin-bottom: 10px;
   width: 100%; }
+  .page-id-19 .project__heading {
+    font-size: 20px;
+    font-weight: bolder;
+    text-decoration: underline;
+    margin-bottom: 10px; }
   .page-id-19 .project__name {
     color: #321469;
     background-color: #5fffaf;
@@ -5930,22 +5935,58 @@ a {
     .page-id-19 .project__name:hover {
       cursor: pointer;
       background-color: #00ff80; }
-  .page-id-19 .project__type {
-    margin-bottom: 4px; }
-  .page-id-19 .project__description p {
-    font-size: 14px;
-    line-height: 1.4; }
+  .page-id-19 .project__details {
+    display: flex;
+    flex-direction: column; }
     @media (min-width: 567px) {
-      .page-id-19 .project__description p {
-        font-size: 16px;
-        line-height: 1.2; } }
+      .page-id-19 .project__details {
+        flex-direction: row; } }
   .page-id-19 .project__contributions {
-    list-style-type: circle;
-    padding-left: 25px; }
-    .page-id-19 .project__contributions li {
-      line-height: 1.2;
-      margin-bottom: 4px;
-      color: #ececec; }
+    flex: 2;
+    padding: 8px; }
+    @media (min-width: 567px) {
+      .page-id-19 .project__contributions {
+        padding: 15px; } }
+    .page-id-19 .project__contributions .project__heading {
+      color: #e76eff;
+      margin-right: 12px; }
+    .page-id-19 .project__contributions_list {
+      list-style-type: circle;
+      padding-left: 20px; }
+      @media (min-width: 567px) {
+        .page-id-19 .project__contributions_list {
+          font-size: 18px;
+          padding-left: 30px;
+          padding-right: 30px; } }
+      .page-id-19 .project__contributions_list li {
+        color: #e76eff;
+        font-size: 15px;
+        line-height: 1.2;
+        padding-bottom: 8px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+        margin-bottom: 8px; }
+        .page-id-19 .project__contributions_list li:last-child {
+          border-bottom: none; }
+        @media (min-width: 567px) {
+          .page-id-19 .project__contributions_list li {
+            font-size: 18px; } }
+  .page-id-19 .project__description {
+    flex: 2;
+    padding: 8px; }
+    @media (min-width: 567px) {
+      .page-id-19 .project__description {
+        padding: 15px; } }
+    .page-id-19 .project__description .project__heading {
+      color: #fff;
+      border-bottom-color: #e76eff; }
+    .page-id-19 .project__description p {
+      font-size: 14px;
+      line-height: 1.4;
+      margin-bottom: 10px; }
+      @media (min-width: 567px) {
+        .page-id-19 .project__description p {
+          font-size: 16px;
+          line-height: 1.2; } }
 
 .page-id-19 .toggle-target {
   display: none;
