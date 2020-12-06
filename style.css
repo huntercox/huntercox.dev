@@ -5718,17 +5718,25 @@ a {
       .site-header .hamburger {
         display: none; } }
 
-.site-main .entry-header h1 {
-  color: #f947ff;
-  font-size: 36px;
-  font-weight: 900;
-  letter-spacing: 1px;
-  padding-bottom: 0px;
-  border-bottom: 2px solid #f947ff;
-  margin-bottom: 10px; }
-  @media (min-width: 567px) {
-    .site-main .entry-header h1 {
-      font-size: 48px; } }
+.site-main .entry-header {
+  margin-bottom: 15px; }
+  .site-main .entry-header h1 {
+    color: #f947ff;
+    font-size: 36px;
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: 1px;
+    padding-bottom: 0px;
+    border-bottom: 2px solid #f947ff;
+    margin-bottom: 10px; }
+    @media (min-width: 567px) {
+      .site-main .entry-header h1 {
+        font-size: 48px; } }
+
+.site-main .entry-content {
+  margin-bottom: 40px; }
+  .site-main .entry-content p {
+    line-height: 1.5; }
 
 .site-footer {
   display: flex;

@@ -137,10 +137,13 @@
     @extend .container;
 
     .entry-header {
+        margin-bottom: 15px;
+
         h1 {
             color: $pink_bright;
             font-size: 36px;
             font-weight: 900;
+            line-height: 1;
             letter-spacing: 1px;
             padding-bottom: 0px;
             border-bottom: 2px solid $pink_bright;
@@ -151,6 +154,14 @@
             }
         }
     }//.entry-header
+
+    .entry-content {
+        margin-bottom: 40px; 
+
+        p {
+            line-height: 1.5;
+        }
+    }//.entry-content
 
 }//.site-main
 
