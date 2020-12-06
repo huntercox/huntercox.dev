@@ -5924,6 +5924,25 @@ a {
           color: #321469;
           font-weight: 900; }
 
+.page-id-17 .work-history .employer {
+  padding: 8px 14px;
+  margin-bottom: 20px;
+  border: 2px solid #fff; }
+  .page-id-17 .work-history .employer__label {
+    display: flex;
+    justify-content: flex-start; }
+    .page-id-17 .work-history .employer__label_at {
+      padding: 5px 10px 5px 10px;
+      line-height: 24px; }
+  .page-id-17 .work-history .employer__job-title {
+    font-size: 22px;
+    line-height: 1.5;
+    color: #5fffaf; }
+  .page-id-17 .work-history .employer__name {
+    font-size: 24px;
+    line-height: 1.4;
+    color: #e76eff; }
+
 .page-id-19 .project {
   margin-bottom: 10px;
   width: 100%; }

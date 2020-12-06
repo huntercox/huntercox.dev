@@ -38,23 +38,47 @@ get_header();
 		<?php
 		$args = array('post_type' => 'employer');
 		$employers = get_posts( $args );
+
+		echo '<div class="work-history">';
+
 		foreach($employers as $job):
 		?>
-			<h3 class="employer_title">><?php echo $job->post_title; ?></h3>
-			<div class='post-content'><?php echo $job->post_content; ?></div>
-			<!-- Projects -->
-			<?php if ( have_rows('project_list') ) : ?>
-			
-				<?php while( have_rows('project_list') ) : the_row(); ?>
-			
-					<?php the_sub_field('project_name'); ?>
-			
-				<?php endwhile; ?>
-			
-			<?php endif; ?>
-			
+			<div class="employer">
+				<div class="employer__label">
+					<?php
+						$job_title = get_field('job_title', $job);
+						$location  = get_field('location', $job);
+						$time 		 = get_field('time_employed', $job); // Group
+						if ($time):
+							$start_date = $time['start_date'];
+							$end_date 	= $time['end_date'];
+							$duration		= $time['duration'];
+						endif;
+					?>
+					<p class="employer__job-title"><?php echo $job_title; ?></p> <span class="employer__label_at">at</span>
+					<h3 class="employer__name"><?php echo $job->post_title; ?></h3>
+				</div>
+				<div class="employer__sub-label">
+					<?php 
+						if ($start_date) {
+							echo $start_date; 
+						}
+						echo 'to';
+						if ($end_date) {
+							echo $end_date; 
+						}		
+							?>
+						</p><!-- /.employer__dates -->
+				</div><!-- /.employer__sub-label -->
+				
+				<div class="employer__description">
+					<?php echo $job->post_content; ?>
+				</div><!-- /.employer__description -->
+			</div><!-- /.employer -->
 		<?php
 		endforeach;
+
+		echo '</div><!-- /.work-history -->'
 		?>
 
 

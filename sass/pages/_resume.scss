@@ -1,0 +1,38 @@
+// Resume page
+
+.page-id-17 {
+  
+  
+  .work-history {
+    .employer {
+      padding: 8px 14px;
+      margin-bottom: 20px;
+      border: 2px solid #fff;
+
+      &__label {
+        display: flex;
+        justify-content: flex-start;
+
+        &_at {
+          padding: 5px 10px 5px 10px;
+          line-height: 24px;
+        }
+      }//.employer__label
+
+        &__job-title {
+          font-size: 22px;
+          line-height: 1.5;
+          color: $green_pastel;
+        }//.employer__job-title
+
+        &__name {
+          font-size: 24px;
+          line-height: 1.4;
+          color: $pink_pastel;
+        }//.employer__name
+
+
+    }//.employer
+  }//.work-history
+
+}//.page-id-17
