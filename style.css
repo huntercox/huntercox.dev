@@ -4885,8 +4885,8 @@ readers do not read off random characters that represent icons */
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url("../node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.eot");
-  src: url("../node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.eot?#iefix") format("embedded-opentype"), url("../node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.woff2") format("woff2"), url("../node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.woff") format("woff"), url("../node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.ttf") format("truetype"), url("../node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.svg#fontawesome") format("svg"); }
+  src: url("./node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.eot");
+  src: url("./node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.eot?#iefix") format("embedded-opentype"), url("./node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.woff2") format("woff2"), url("./node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.woff") format("woff"), url("./node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.ttf") format("truetype"), url("./node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.svg#fontawesome") format("svg"); }
 
 .fab {
   font-family: 'Font Awesome 5 Brands';
@@ -5610,10 +5610,6 @@ h1 {
   font-family: "Alegreya", Helvetica, sans-serif;
   font-weight: 900; }
 
-h3.employer_title {
-  color: #e76eff;
-  background-color: #4e2699; }
-
 html,
 body {
   background-color: #321469;
@@ -5737,6 +5733,17 @@ a {
   margin-bottom: 40px; }
   .site-main .entry-content p {
     line-height: 1.5; }
+
+.site-main h2 {
+  color: #00ff80;
+  font-size: 24px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  border-bottom: 2px solid #00ff80;
+  margin-bottom: 20px; }
+  @media (min-width: 567px) {
+    .site-main h2 {
+      font-size: 32px; } }
 
 .site-footer {
   display: flex;

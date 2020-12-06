@@ -163,6 +163,19 @@
         }
     }//.entry-content
 
+    // Headings
+    h2 {
+        color: $green_bright;
+        font-size: 24px;
+        font-weight: 900;
+        letter-spacing: 1px;
+        border-bottom: 2px solid $green_bright;
+        margin-bottom: 20px;
+
+        @media (min-width: $breakpoint_phone) {
+            font-size: 32px;
+        }
+    }
 }//.site-main
 
 
