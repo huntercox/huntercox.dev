@@ -34,6 +34,7 @@ get_header();
 		endwhile; // End of the loop.
 		?>
 
+		<h2>Work History</h2>
 		<?php
 		$args = array('post_type' => 'employer');
 		$employers = get_posts( $args );
@@ -60,5 +61,4 @@ get_header();
 	</main><!-- #main -->
 
 <?php
-get_sidebar();
 get_footer();
