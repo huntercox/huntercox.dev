@@ -1,6 +1,10 @@
 html, body {
     background-color: $bg;
+    background-image: url(img/pink-dust.png);
+    background-repeat: repeat;
+        background-blend-mode: color-dodge;
     color: #fff;
+    font-family: $base;
 }
 
 a {
