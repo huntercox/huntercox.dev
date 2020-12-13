@@ -47,9 +47,29 @@ get_header();
 						<p><?php echo get_field('home_intro_section'); ?></p>
 					</div><!-- ./home__intro-section -->
 				<?php endif; ?>
+				
+			</article><!-- #post-<?php the_ID(); ?> -->
+			<?php endwhile; // End of the loop. ?>
 
-			<!-- Links -->
-					<div class="home__links">
+		</main><!-- #main -->
+		<?php 
+			$bg_img = get_field('background_image', 'option');
+			
+			if( $bg_img ) { echo '</div><!-- /.bg-img -->'; } ?>
+
+
+		<!-- Callout -->
+		<?php 
+
+			if( $bg_img ) {
+				$bg_url = $bg_img['url'];
+				echo '<div class="home__callout bg-img" style="background-image:url('.$bg_url.');">';
+			} else {
+				echo '<div class="home__callout">';
+			}
+		?>
+				<!-- Links -->
+				<div class="home__links">
 					<?php
 						// Links group
 						$links = get_field('home_links_section'); 
@@ -75,58 +95,33 @@ get_header();
 								echo '<a class="links__projects" href="'. esc_url($projects_url) .'">' .$projects_title.'</a>';
 								
 							}
+							echo '</div><!-- /.links -->';
 						endif;
 					?>
 					</div><!-- /.home__links -->
-				
-			</article><!-- #post-<?php the_ID(); ?> -->
-			<?php endwhile; // End of the loop. ?>
 
-		</main><!-- #main -->
-		<?php 
-			$bg_img = get_field('background_image', 'option');
-			
-			if( $bg_img ) { echo '</div><!-- /.bg-img -->'; } ?>
-
-
-		<!-- Callout -->
-		<?php 
-
-			if( $bg_img ) {
-				$bg_url = $bg_img['url'];
-				echo '<div class="home__callout bg-img" style="background-image:url('.$bg_url.');">';
-			} else {
-				echo '<div class="home__callout">';
-			}
-		?>
 			<div class="callout container">
 			<?php
 				// Callout group
 				$callout = get_field('home_callout_section'); 
 				if ( $callout ) : 
 					$callout_headline =  $callout['callout_headline'];
-					$callout_tagline  =  $callout['callout_tagline'];
 					$callout_link 		=  $callout['callout_link'];
 
 					// Headline
 					if( $callout_headline ) {
-						echo '<h4 class="callout__headline">';
+						echo '<p class="callout__headline">';
 							echo $callout_headline;
-						echo '</h4>';
-					}
-
-					// Tagline
-					if( $callout_tagline ) {
-						echo '<div class="callout__tagline">';
-							echo $callout_tagline;
-						echo '</div>';
+						echo '</p>';
 					}
 
 					// Link
 					if( $callout_link ) {
-						echo '<div class="callout__link">';
-							echo '<a href="mailto:'.$callout_link.'">Email me</a>';
-						echo '</div>';
+						$link_url = $callout_link['url'];
+						$link_title = $callout_link['title'];
+    			?>
+						<a class="callout__link" href="<?php echo esc_url( $link_url ); ?>"><?php echo esc_html( $link_title ); ?></a>
+					<?php
 					}
 					
 				endif; // callout group
