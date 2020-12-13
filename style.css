@@ -5750,14 +5750,14 @@ a {
   padding: 5px;
   padding-bottom: 5px;
   margin-top: 80px;
-  border-top: 2px solid #f947ff;
-  background-color: #e76eff; }
+  border-top: 1px solid #e76eff;
+  background-color: rgba(255, 255, 255, 0.05); }
   .site-footer .site-info {
     margin-left: 10px; }
     .site-footer .site-info a {
-      color: #1f0c42;
-      font-size: 14px;
-      font-weight: bolder;
+      color: #fff;
+      font-size: 18px;
+      font-family: "Caveat", cursive;
       transition: all 200ms linear; }
       .site-footer .site-info a:hover {
         color: #4e2699; }
@@ -5766,14 +5766,11 @@ a {
     justify-content: flex-end; }
     .site-footer .footer__social-links li {
       margin: 4px 10px 0 10px; }
-      .site-footer .footer__social-links li a {
-        color: #1f0c42;
-        transition: all 200ms linear; }
-        .site-footer .footer__social-links li a i.fab {
-          color: #1f0c42;
-          font-size: 24px; }
-        .site-footer .footer__social-links li a:hover i.fab {
-          color: #4e2699; }
+      .site-footer .footer__social-links li a i.fab {
+        color: #5fffaf;
+        font-size: 24px; }
+      .site-footer .footer__social-links li a:hover i.fab {
+        color: #f947ff; }
 
 .bg-img {
   background-size: cover;
