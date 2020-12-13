@@ -55,15 +55,16 @@ get_header();
 							$duration		= $time['duration'];
 						endif;
 					?>
-					<p class="employer__job-title"><?php echo $job_title; ?></p> <span class="employer__label_at">at</span>
-					<h3 class="employer__name"><?php echo $job->post_title; ?></h3>
+					<p class="employer__job-title"><?php echo $job_title; ?></p>
+					<h3 class="employer__name"><span class="employer__name_at">at</span><?php echo $job->post_title; ?></h3>
 				</div>
 				<div class="employer__sub-label">
+					<p class="employer__dates">
 					<?php 
 						if ($start_date) {
 							echo $start_date; 
 						}
-						echo 'to';
+						echo '<span class="employer__dates_to">to</span>';
 						if ($end_date) {
 							echo $end_date; 
 						}		

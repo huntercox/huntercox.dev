@@ -1,27 +1,35 @@
 // Resume page
 
-.page-id-17 {
-  
-  
+.page-id-17 { 
   .work-history {
     .employer {
-      padding: 8px 14px;
+      background-color: $purple_dk;
+      padding: 12px 14px 18px 14px;
       margin-bottom: 20px;
-      border: 2px solid #fff;
+      border: 1px solid;
+      
+      &:nth-child(even) {
+        border-color: $pink_pastel;
+      }
+      &:nth-child(odd) {
+        border-color: $green_pastel;
+      }
 
       &__label {
-        display: flex;
-        justify-content: flex-start;
+        flex-direction: column;
 
-        &_at {
-          padding: 5px 10px 5px 10px;
-          line-height: 24px;
+        @media (min-width: $breakpoint-phone) {
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-start;
         }
+
       }//.employer__label
+
 
         &__job-title {
           font-size: 22px;
-          line-height: 1.5;
+          line-height: 1.4;
           color: $green_pastel;
         }//.employer__job-title
 
@@ -29,8 +37,35 @@
           font-size: 24px;
           line-height: 1.4;
           color: $pink_pastel;
+          margin-bottom: 2px;
+
+          &_at {
+            padding: 5px 10px 5px 10px;
+            line-height: 24px;
+            color: #ececec;
+            font-size: 16px;
+            font-family: $base;
+          }
         }//.employer__name
 
+      &__sub-label {
+        border-top: 1px solid $purple_lt;
+        padding-top: 3px;
+        padding-bottom: 5px;
+        border-bottom: 1px solid $purple_lt;
+        margin-bottom: 5px;
+
+        .employer__dates {
+          font-size: 14px;
+          color: #999;
+
+          &_to {
+            padding-left: 6px;
+            padding-right: 6px;
+            color : #ececec;
+          }
+        }
+      }//.employer__sub-label
 
     }//.employer
   }//.work-history

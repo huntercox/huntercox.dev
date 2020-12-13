@@ -5927,23 +5927,49 @@ a {
         border: none !important; }
 
 .page-id-17 .work-history .employer {
-  padding: 8px 14px;
+  background-color: #1f0c42;
+  padding: 12px 14px 18px 14px;
   margin-bottom: 20px;
-  border: 2px solid #fff; }
+  border: 1px solid; }
+  .page-id-17 .work-history .employer:nth-child(even) {
+    border-color: #e76eff; }
+  .page-id-17 .work-history .employer:nth-child(odd) {
+    border-color: #5fffaf; }
   .page-id-17 .work-history .employer__label {
-    display: flex;
-    justify-content: flex-start; }
-    .page-id-17 .work-history .employer__label_at {
-      padding: 5px 10px 5px 10px;
-      line-height: 24px; }
+    flex-direction: column; }
+    @media (min-width: 567px) {
+      .page-id-17 .work-history .employer__label {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start; } }
   .page-id-17 .work-history .employer__job-title {
     font-size: 22px;
-    line-height: 1.5;
+    line-height: 1.4;
     color: #5fffaf; }
   .page-id-17 .work-history .employer__name {
     font-size: 24px;
     line-height: 1.4;
-    color: #e76eff; }
+    color: #e76eff;
+    margin-bottom: 2px; }
+    .page-id-17 .work-history .employer__name_at {
+      padding: 5px 10px 5px 10px;
+      line-height: 24px;
+      color: #ececec;
+      font-size: 16px;
+      font-family: "Texturina", serif; }
+  .page-id-17 .work-history .employer__sub-label {
+    border-top: 1px solid #4e2699;
+    padding-top: 3px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #4e2699;
+    margin-bottom: 5px; }
+    .page-id-17 .work-history .employer__sub-label .employer__dates {
+      font-size: 14px;
+      color: #999; }
+      .page-id-17 .work-history .employer__sub-label .employer__dates_to {
+        padding-left: 6px;
+        padding-right: 6px;
+        color: #ececec; }
 
 .page-id-19 .project {
   margin-bottom: 10px;
