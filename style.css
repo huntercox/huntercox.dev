@@ -5788,24 +5788,24 @@ a {
 .home .hero__bg-img {
   background-position: center;
   background-size: cover;
-  height: 260px;
-  max-height: 260px; }
+  height: 240px;
+  max-height: 240px; }
   @media (min-width: 567px) {
     .home .hero__bg-img {
       height: 300px;
       max-height: 300px; } }
 
 .home .hero__overlay {
-  padding: 10px 20px 14px 10px;
+  padding: 10px 15px 14px 10px;
   background-color: #1f0c42;
   background-blend-mode: multiply;
   border: 4px double #f947ff;
   position: absolute;
-  width: 54%;
+  width: 56%;
   max-width: none;
-  top: 6%;
+  top: 20%;
   bottom: auto;
-  right: 6%; }
+  right: 5%; }
   @media (min-width: 567px) {
     .home .hero__overlay {
       padding: 16px 26px 18px 26px;
@@ -5819,7 +5819,8 @@ a {
 .home .hero__headline {
   color: #5fffaf;
   text-align: right;
-  font-size: 24px;
+  line-height: normal;
+  font-size: 22px;
   font-family: "Caveat Brush", cursive; }
   @media (min-width: 567px) {
     .home .hero__headline {
@@ -5828,25 +5829,26 @@ a {
 .home .hero__tagline {
   text-align: right;
   line-height: 1.25;
-  font-size: 16px; }
+  font-size: 14px; }
   @media (min-width: 567px) {
     .home .hero__tagline {
       font-size: 20px; } }
 
 .home__intro {
-  margin-bottom: 200px; }
+  margin-top: 40px;
+  margin-bottom: 180px;
+  text-align: center; }
   @media (min-width: 500px) {
     .home__intro {
+      text-align: left;
       margin: 60px 0 80px 0; } }
   .home__intro p {
     font-weight: normal;
     letter-spacing: 1px;
-    text-align: left;
     font-size: 16px;
     line-height: 1.4; }
     @media (min-width: 567px) {
       .home__intro p {
-        text-align: center;
         font-size: 18px;
         line-height: 1.5; } }
     .home__intro p strong {
@@ -5854,8 +5856,11 @@ a {
 
 .home__links {
   position: absolute;
-  top: -45px;
+  top: -150px;
   width: 100%; }
+  @media (min-width: 500px) {
+    .home__links {
+      top: -45px; } }
   .home__links .links {
     display: flex;
     justify-content: space-around;
@@ -5896,8 +5901,12 @@ a {
   position: relative;
   background-color: #5fffaf; }
   .home__callout .callout {
-    padding: 60px 0 20px 0;
-    text-align: right; }
+    text-align: center;
+    padding: 40px 0 20px 0; }
+    @media (min-width: 500px) {
+      .home__callout .callout {
+        padding: 60px 0 20px 0;
+        text-align: right; } }
     .home__callout .callout__headline {
       color: #1f0c42;
       font-size: 16px;
