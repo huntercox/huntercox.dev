@@ -85,5 +85,41 @@ get_header();
 
 	</main><!-- #main -->
 
+	<div class="resume__skills">
+		<div class="resume__skills--hard">
+			<div class="container">
+			<?php  
+				$hard_skills = get_field('hard_skills');
+				if ($hard_skills) {
+					echo '<h3>Hard Skills</h3>';
+					echo '<ul class="hard-skills">';
+					foreach ($hard_skills as $skill) :
+						$hard_skill = $skill['hard_skill'];
+						echo '<li>'.$hard_skill.'</li>';
+					endforeach;
+					echo '</ul>';
+				}
+			?>
+			</div><!-- /.container -->
+		</div><!-- /.resume__skills--hard -->
+
+		<div class="resume__skills--soft">
+			<div class="container">
+			<?php  
+				$soft_skills = get_field('soft_skills');
+				if ($soft_skills) {
+					echo '<h3>Soft Skills</h3>';
+					echo '<ul class="soft-skills">';
+					foreach ($soft_skills as $skill) :
+						$soft_skill = $skill['soft_skill'];
+						echo '<li>'.$soft_skill.'</li>';
+					endforeach;
+					echo '</ul>';
+				}
+			?>
+			</div><!-- /.container -->
+		</div><!-- /.resume__skills--hard -->
+	</div><!-- /.resume__skills -->
+
 <?php
 get_footer();

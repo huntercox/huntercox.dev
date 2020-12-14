@@ -70,4 +70,64 @@
     }//.employer
   }//.work-history
 
+  // Skills
+  .resume__skills {
+    h3 {
+      border-bottom: 2px solid;
+    }
+    ul {
+      padding-left: 15px;
+      margin: 8px 0 30px 0;
+
+      li {
+        &::before {
+          display: inline-block;
+          font-style: normal;
+          font-variant: normal;
+          text-rendering: auto;
+          -webkit-font-smoothing: antialiased;
+          font-family: "Font Awesome 5 Free";
+          font-weight: 900;
+          font-size: 12px;
+          color: $pink_pastel;
+          margin-right: 6px;
+        }
+      }
+    }
+    &--hard {
+      h3 {
+        color: $pink_pastel;
+        border-color: $pink_pastel;
+      }
+      ul {
+        
+        li {
+          @extend .fa-circle;
+
+          &::before {
+            color: $pink_pastel;
+          }
+        }//li
+      }//ul
+    }//.resume__skills--hard
+    
+    &--soft {
+      h3 {
+        color: $green_pastel;
+        border-color: $green_pastel;
+      }
+      ul {
+        
+        li {
+          @extend .fa-circle;
+
+          &::before {
+            color: $green_pastel;
+          }
+        }//li
+      }//ul
+    }//.resume__skills--soft
+
+  }//.resume__skills
+
 }//.page-id-17

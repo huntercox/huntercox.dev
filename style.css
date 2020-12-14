@@ -1234,7 +1234,7 @@ readers do not read off random characters that represent icons */
 .fa-church:before {
   content: "\f51d"; }
 
-.fa-circle:before {
+.fa-circle:before, .page-id-17 .resume__skills--hard ul li:before, .page-id-17 .resume__skills--soft ul li:before {
   content: "\f111"; }
 
 .fa-circle-notch:before {
@@ -4890,6 +4890,22 @@ readers do not read off random characters that represent icons */
   font-weight: 400; }
 
 /*!
+ * Font Awesome Free 5.15.1 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ */
+@font-face {
+  font-family: 'Font Awesome 5 Free';
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url("./node_modules/@fortawesome/fontawesome-free/webfonts/fa-regular-400.eot");
+  src: url("./node_modules/@fortawesome/fontawesome-free/webfonts/fa-regular-400.eot?#iefix") format("embedded-opentype"), url("./node_modules/@fortawesome/fontawesome-free/webfonts/fa-regular-400.woff2") format("woff2"), url("./node_modules/@fortawesome/fontawesome-free/webfonts/fa-regular-400.woff") format("woff"), url("./node_modules/@fortawesome/fontawesome-free/webfonts/fa-regular-400.ttf") format("truetype"), url("./node_modules/@fortawesome/fontawesome-free/webfonts/fa-regular-400.svg#fontawesome") format("svg"); }
+
+.far {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 400; }
+
+/*!
  * Hamburgers
  * @description Tasty CSS-animated hamburgers
  * @author Jonathan Suh @jonsuh
@@ -5970,6 +5986,38 @@ a {
         padding-left: 6px;
         padding-right: 6px;
         color: #ececec; }
+
+.page-id-17 .resume__skills h3 {
+  border-bottom: 2px solid; }
+
+.page-id-17 .resume__skills ul {
+  padding-left: 15px;
+  margin: 8px 0 30px 0; }
+  .page-id-17 .resume__skills ul li::before {
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 12px;
+    color: #e76eff;
+    margin-right: 6px; }
+
+.page-id-17 .resume__skills--hard h3 {
+  color: #e76eff;
+  border-color: #e76eff; }
+
+.page-id-17 .resume__skills--hard ul li::before {
+  color: #e76eff; }
+
+.page-id-17 .resume__skills--soft h3 {
+  color: #5fffaf;
+  border-color: #5fffaf; }
+
+.page-id-17 .resume__skills--soft ul li::before {
+  color: #5fffaf; }
 
 .page-id-19 .project {
   margin-bottom: 10px;
