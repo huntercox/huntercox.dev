@@ -20,11 +20,11 @@ function watch() {
   browserSync.init({
     notify: false,
     proxy: {
-      target: "https://huntercox.local",
+      target: "https://huntercox.test",
     },
     https: {
-      key: "/Applications/MAMP/Library/OpenSSL/certs/huntercox.local.key",
-      cert: "/Applications/MAMP/Library/OpenSSL/certs/huntercox.local.crt"
+      key: "/Users/hsc/Documents/Dev/huntercox.test.key",
+      cert: "/Users/hsc/Documents/Dev/huntercox.test.crt"
     }
   });
   gulp.watch('./sass/**/*.scss', styles);
