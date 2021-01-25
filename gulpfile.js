@@ -23,9 +23,13 @@ function watch() {
       target: "https://huntercox.test",
     },
     https: {
-      key: "/Users/hsc/Documents/Dev/huntercox.test.key",
-      cert: "/Users/hsc/Documents/Dev/huntercox.test.crt"
-    }
+      key: "/Applications/MAMP/Library/OpenSSL/certs/huntercox.test.key",
+      cert: "/Applications/MAMP/Library/OpenSSL/certs/huntercox.test.crt"
+    },
+    // https: {
+    //   key: "/Users/hsc/Documents/Dev/huntercox.test.key",
+    //   cert: "/Users/hsc/Documents/Dev/huntercox.test.crt"
+    // }
   });
   gulp.watch('./sass/**/*.scss', styles);
   // gulp.watch('./*.php').on('change', browserSync.reload);
