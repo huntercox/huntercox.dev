@@ -38,6 +38,23 @@
             }
         }//.project__name
 
+
+        &__link {
+            background-color: rgba(255,255,255,0.90);
+            color: $purple_dk;
+            border: 1px solid rgba(255,255,255,0.25);
+            padding: 6px 30px;
+            margin-top: 10px;
+            margin-left: 10px;
+            transition: all 100ms linear;
+            display: inline-block;
+
+            &:hover {
+                background-color: rgba(255,255,255,1);
+                border-color: rgba(255,255,255,1);
+            }
+        }//.project__link
+
         &__details {
             display: flex;
             flex-direction: column;
@@ -46,7 +63,6 @@
                 flex-direction: row;
             }
         }//.project__details
-            
 
             &__contributions {
                 flex: 2;

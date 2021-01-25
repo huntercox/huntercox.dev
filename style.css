@@ -4896,14 +4896,15 @@ readers do not read off random characters that represent icons */
 @font-face {
   font-family: 'Font Awesome 5 Free';
   font-style: normal;
-  font-weight: 400;
+  font-weight: 900;
   font-display: block;
-  src: url("./node_modules/@fortawesome/fontawesome-free/webfonts/fa-regular-400.eot");
-  src: url("./node_modules/@fortawesome/fontawesome-free/webfonts/fa-regular-400.eot?#iefix") format("embedded-opentype"), url("./node_modules/@fortawesome/fontawesome-free/webfonts/fa-regular-400.woff2") format("woff2"), url("./node_modules/@fortawesome/fontawesome-free/webfonts/fa-regular-400.woff") format("woff"), url("./node_modules/@fortawesome/fontawesome-free/webfonts/fa-regular-400.ttf") format("truetype"), url("./node_modules/@fortawesome/fontawesome-free/webfonts/fa-regular-400.svg#fontawesome") format("svg"); }
+  src: url("./node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.eot");
+  src: url("./node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.eot?#iefix") format("embedded-opentype"), url("./node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.woff2") format("woff2"), url("./node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.woff") format("woff"), url("./node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.ttf") format("truetype"), url("./node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.svg#fontawesome") format("svg"); }
 
-.far {
+.fa,
+.fas {
   font-family: 'Font Awesome 5 Free';
-  font-weight: 400; }
+  font-weight: 900; }
 
 /*!
  * Hamburgers
@@ -6045,6 +6046,18 @@ a {
     .page-id-19 .project__name:hover {
       cursor: pointer;
       background-color: #00ff80; }
+  .page-id-19 .project__link {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #1f0c42;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    padding: 6px 30px;
+    margin-top: 10px;
+    margin-left: 10px;
+    transition: all 100ms linear;
+    display: inline-block; }
+    .page-id-19 .project__link:hover {
+      background-color: white;
+      border-color: white; }
   .page-id-19 .project__details {
     display: flex;
     flex-direction: column; }
