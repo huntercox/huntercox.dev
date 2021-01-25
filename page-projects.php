@@ -53,6 +53,23 @@ get_header();
 				</div><!-- /.toggler -->
 				
 				<div class="toggle-target">
+					<?php
+						$link = get_field('project_links');
+						if ( $link ) {
+							$direct = $link['relevant_link'];
+							if ( $direct ) :
+								echo '<a class="project__link" href="'.$direct.'" target="_blank">View <strong>live</strong> project!  <i class="fas fa-external-link-alt"></i></a>';
+							endif;
+							$wayback = $link['wayback_machine_link'];
+							if ( $wayback ) :
+								echo '<a class="project__link" href="'.$wayback.'" target="_blank">View <strong>archived</strong> project!  <i class="fas fa-external-link-alt"></i></a>';
+							endif;
+
+							if ( !$direct && !$wayback ):
+								echo "<p>Sorry, for some reason there's not a link for this project.</p>";
+							endif;
+						}
+					?>
 					<div class="project__details">
 						<?php
 							$contributions = get_field('project_contributions');
